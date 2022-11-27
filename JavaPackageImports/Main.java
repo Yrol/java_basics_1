@@ -1,8 +1,8 @@
 
 /*
- * Importing all classes within entities package.
+ * Importing all classes within entities package using wildcard
  */
- 
+
 import entities.*;
 
 /*
