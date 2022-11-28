@@ -1,20 +1,31 @@
 class Main {
 
     /*
-     * Default initialization of primitives outside of main methods
-     * These need to static always
+     * Default initialization of static primitives outside of main methods.
      */
-    static int myIntStatic; // by default 0
-    static String myStringStatic; // by default null
-    static double myDoubleStatic; // by default 0.0
-    static boolean myBooleanStatic; // by default false
+    static int myIntStatic; // by default value will be: 0
+    static String myStringStatic; // by default value will be: null
+    static double myDoubleStatic; // by default value will be: 0.0
+    static boolean myBooleanStatic; // by default value will be: false
+
+    /*
+     * Declaring and initialization of non-static primitives outside of main
+     * methods.
+     */
+    int myNormalInt1;
+    int myNormalInt2 = 10;
 
     public static void main(String[] args) {
 
+        // Static variables can be used within the the static method (public static)
         System.out.println("myIntStatic=" + myIntStatic);
         System.out.println("myStringStatic=" + myStringStatic);
         System.out.println("myDoubleStatic=" + myDoubleStatic);
         System.out.println("myBooleanStatic=" + myBooleanStatic);
+
+        // Non static variables cannot be referenced inside a static method (public
+        // static void main)
+        // System.out.println(myNormalInt1); // will not compile
 
         /*
          * Local variable declaration and initialization
