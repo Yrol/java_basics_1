@@ -1,6 +1,7 @@
 class Main {
 
     /*
+     * Global variables
      * Default initialization of static primitives outside of main methods.
      */
     static int myIntStatic; // by default value will be: 0
