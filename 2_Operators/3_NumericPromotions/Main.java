@@ -1,7 +1,8 @@
 class Main {
 
     /*
-     * ##### Auto promote (converting smaller data type to bigger) ######
+     * ##### Auto promote (converting smaller data type to a bigger data type)
+     * ######
      * 
      * Rule 1:
      * When two values are different types, Java will auto promote one of the values
@@ -24,7 +25,9 @@ class Main {
      * 
      * 
      * ####### Casting ##########
-     * Casting is converting bigger type to smaller type (opposite of auto promote)
+     * Casting is converting bigger type to smaller type (opposite of auto promote).
+     * When there is an overflow, Java will automatically wrap the value to be the
+     * lowest of the casting type.
      */
 
     public static void main(String[] main) {
@@ -51,7 +54,7 @@ class Main {
         double result = b + c + d;
         System.out.println("result= " + result); // result is type double
 
-        // Rule 3 - promoted to int first before the addition
+        // Rule 3 - promoted to int first before the addition. The result will be it
         short myShort1 = 3;
         short myShort2 = 14;
         System.out.println("myShort1 + myShort2= " + (myShort1 + myShort2));
@@ -81,5 +84,14 @@ class Main {
 
         int intResult = anotherInt + myByte;
         System.out.println("intResult= " + intResult);
+
+        short myShort3 = 10;
+        short myShort4 = 20;
+
+        // Ex3
+        // short shortResult = myShort3 * myShort4 // wont compile since int. Hence cast
+        // to short as below.
+        short shortResult = (short) (myShort3 * myShort4);
+        System.out.println("shortResult=" + shortResult);
     }
 }
