@@ -1,9 +1,10 @@
 public class Main {
 
     /*
-     * Equality operator: ==. !=
+     * Equality operator: == and !=
      * Comparing two operands and return boolean
-     * Can be used for comparing primitives, booleans and object
+     * Can be used for comparing primitives(int, long, double, float & etc),
+     * booleans and object (String & ect)
      */
 
     public static void main(String[] args) {
