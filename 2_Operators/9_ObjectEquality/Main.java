@@ -3,8 +3,6 @@ public class Main {
     /*
      * Primitives are compared using == operators.
      * Object values are compared using .equals() operator (internal value of obj).
-     * When comparing objects we're comparing the memory address of the object.
-     * == operators can be used on objects for comparing the memory address.
      */
     public static void main(String[] args) {
 
@@ -13,7 +11,7 @@ public class Main {
          */
 
         // -128 to 127
-        Integer myInteger1 = 127;
+        Integer myInteger1 = 127; // similar to: Integer myInteger1 = Integer.valueOf(127)
         Integer myInteger2 = 127;
         System.out.println("myInteger1 == myInteger2 when <= 127:" + (myInteger1 == myInteger2));
 
@@ -61,5 +59,23 @@ public class Main {
         System.out.println("int1 equals(int3):" + (int1.equals(int3))); // true
         System.out.println("int2 equals(int3):" + (int2.equals(int3))); // true
 
+        /*
+         * Strings
+         */
+
+        // both myString1 and myString2 will have the same value.
+        String myString1 = "James";
+        String myString2 = "James";
+        String myString3 = new String("James");
+        System.out.println("myString1 equals(myString2):" + myString1.equals(myString2)); // true (comparing object
+                                                                                          // value)
+        System.out.println("myString1 == myString2:" + (myString1 == myString2)); // true (comparing memory locations)
+        System.out.println("myString1 == myString3:" + (myString1 == myString3)); // false (comparing memory locations)
+        System.out.println("myString1 equals(myString3):" + myString1.equals(myString3)); // true (comparing object
+                                                                                          // value)
+
+        System.out.println("myString1 memory location:" + System.identityHashCode(myString1));
+        System.out.println("myString2 memory location:" + System.identityHashCode(myString2));
+        System.out.println("myString3 memory location:" + System.identityHashCode(myString3));
     }
 }
