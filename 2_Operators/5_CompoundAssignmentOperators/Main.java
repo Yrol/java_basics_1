@@ -23,8 +23,8 @@ class Main {
         // b = b * a; // won't compile since the result is promoted to long and then try
         // to assign to int.
 
-        // Casting the above to work. This is equal to b *= a; as below
-        b = (int) (a * b);
+        // Casting the above to work.
+        b = (int) (a * b); // Equals to b *= a
         b *= a;
         System.out.println("b=" + b);
 
