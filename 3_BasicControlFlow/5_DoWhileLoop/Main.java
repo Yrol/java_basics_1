@@ -96,5 +96,15 @@ public class Main {
 
         System.out.println("number=" + number); // will not be printed
 
+        /*
+         * Invalid Do-while loops
+         */
+
+        // do {
+        // int myVar = 1;
+        // System.out.println(myVar++ + " ");
+        // } while (myVar <= 10); // won't compile since variable needs to defined
+        // outside
+
     }
 }
