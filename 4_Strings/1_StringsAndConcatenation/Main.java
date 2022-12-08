@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         String string1 = "Hello";
-        String string2 = new String("Hello2"); // Valid but not needed
+        String string2 = new String("Hello2"); // Valid but not necessary
 
         // Ex1: concatenation
         int myInt = 5;

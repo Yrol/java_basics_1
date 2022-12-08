@@ -27,7 +27,7 @@ public class Main {
         // Ex1:
         String s1 = "1";
         String s2 = s1.concat("2"); // s2 == "12"
-        s2.concat("3"); // won't be applied since not reassigned
+        s2.concat("3"); // won't be applied since not reassigned to same or different variable
         System.out.println(s1); // 1
         System.out.println(s2); // 12
 
