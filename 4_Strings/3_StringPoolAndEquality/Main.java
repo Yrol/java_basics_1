@@ -39,7 +39,8 @@ public class Main {
         String str2 = "ab";
 
         // The following will return different memory locations although we do ("ab" +
-        // "c") underneath in both occasions.
+        // "c") underneath in both occasions. This is because str2 is a variable and
+        // "ab" is a literal.
         String str3 = str2 + "c"; // concat runtime since str2 is a variable. Causing str3 to be new variable
         String str4 = "ab" + "c"; // concat at compile time and return a location from String Pool if applicable.
 
