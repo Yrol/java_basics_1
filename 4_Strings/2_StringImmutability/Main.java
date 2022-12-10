@@ -20,6 +20,11 @@ public class Main {
         hello = hello.toUpperCase();
         System.out.println(hello);
 
+        // this will also work however it won't be applied to "hello" variable since
+        // immutable
+        System.out.println(hello.toLowerCase());
+        System.out.println(hello);
+
         /*
          * String concat
          */
