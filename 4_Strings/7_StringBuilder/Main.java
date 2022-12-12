@@ -75,5 +75,8 @@ public class Main {
         // both will print: "This Java is so Cool"
         System.out.println(a);
         System.out.println(b);
+
+        // Invalid scenarios
+        // StringBuilder hello = "hello"; // won't compile. Illegal assignment
     }
 }

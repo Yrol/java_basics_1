@@ -12,6 +12,8 @@ public class Main {
         String string1 = "Hello";
         String string2 = new String("Hello2"); // Valid but not necessary
 
+        // String myNumber = 5 + 5; // Invalid won't compile
+
         // Ex1: concatenation
         int myInt = 5;
         System.out.println("String + int=" + string1 + myInt);

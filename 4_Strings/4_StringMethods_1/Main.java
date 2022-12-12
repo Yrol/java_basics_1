@@ -46,7 +46,7 @@ public class Main {
 
         // beginIndex − the begin index, inclusive.
         // endIndex − the end index, exclusive. <-- IMPORTANT!
-        System.out.println(str.substring(8));
+        System.out.println(str.substring(8)); // "fun": Will print from 8th index onwards
         System.out.println(str.substring(0, 3)); // will print "Jav".Index 3 is exclusive
         System.out.println(str.substring(4, 4)); // (both indexes are equal) nothing will be printed
 

@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
+        String test = "012345";
+        System.out.println(test.substring(1));
+
         StringBuilder sb1 = new StringBuilder();
         StringBuilder sb2 = new StringBuilder();
         StringBuilder sb3 = sb1.append("Java"); // append() will return the same StringBuilder - sb1

@@ -51,5 +51,10 @@ public class Main {
         // memory locations will be different
         System.out.println("str3 - identityHashCode -> " + System.identityHashCode(str3));
         System.out.println("str4 - identityHashCode -> " + System.identityHashCode(str4));
+
+        // Ex2:
+        String hello = "Hello";
+        String hello2 = "Hello";
+        System.out.println(hello2 == hello); // true
     }
 }
