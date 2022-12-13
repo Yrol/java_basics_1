@@ -23,10 +23,25 @@ class Main {
         // b = b * a; // won't compile since the result is promoted to long and then try
         // to assign to int.
 
-        // Casting the above to work.
+        /*
+         * Casting
+         * - In compound operators, casting will work automatically.
+         */
+
+        // Casting the above to work when not using compound operators and need to cast
+        // explicitly to int since a * b cause auto promote to type long
+        // ex:1
+        // b = a * b; // doesn't compile
         b = (int) (a * b); // Equals to b *= a
         b *= a;
         System.out.println("b=" + b);
+
+        // ex:2
+        float l = 18.8f;
+        short k = 20;
+        // k = k * l; // doesn't compile
+        k *= l;
+        System.out.println("k=" + k);
 
         long c = 4;
         long d = (c = 2); // shorter form of c = 2; d = c;
