@@ -20,7 +20,7 @@ public class Main {
         int[] ids, types;
         ids = new int[] { 1, 4 };
 
-        // Method 5: square bracket placement. Following are valid
+        // Method 5: square bracket placement. Following are valid and both are empty.
         int[] a1;
         int a2[];
 
