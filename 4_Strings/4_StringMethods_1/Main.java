@@ -3,7 +3,7 @@ public class Main {
     /*
      * When applying methods below remember:
      * - Strings are sequence of characters (start from index 0)
-     * - Strings a immutable (cannot change)
+     * - Strings are immutable (cannot change)
      */
     public static void main(String[] args) {
         // indexes
