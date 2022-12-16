@@ -5,7 +5,7 @@ public class Main {
     /*
      * Nested loops are used for iterate over multidimensional arrays
      */
-    public static void main(String[] args) {
+    public static void main(String args[]) {
 
         // Simple nested loop
         for (int hours = 1; hours <= 6; hours++) {
