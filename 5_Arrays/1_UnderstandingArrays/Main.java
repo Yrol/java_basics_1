@@ -24,6 +24,11 @@ public class Main {
         int[] a1;
         int a2[];
 
+        // Array with 0 elements
+        int arrayZero[] = {};
+        System.out.println("Zero Array length = " + arrayZero.length); // will be 0
+        // arrayZero[0] = 1; // Not valid and will cause out of bound exception.
+
         /*
          * Object arrays
          */
