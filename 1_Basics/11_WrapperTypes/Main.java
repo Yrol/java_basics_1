@@ -9,9 +9,11 @@ class Main {
         int myInt = 10;
 
         /*
-         * Integer class will wrap the primitive integer value
-         * Integer can hold null values where as int cannot
-         * Boxing: assigning a primitive value to a wrapper as below
+         * - Integer class will wrap the primitive integer value.
+         * - Integer can hold null values where as int cannot.
+         * - Boxing: assigning a primitive value to a wrapper as below.
+         * - Autoboxing: Automatically converts a primitive value to the respective
+         * wrapper object.
          */
 
         // Deprecated
@@ -24,6 +26,15 @@ class Main {
 
         // Assigning a primitive directly
         Integer myInteger4 = 20;
+
+        // Similar rules apply as primitive assignments
+        // Integer myInteger4 = 20.5; // won't compile
+        // Float myFloat = 56.8;
+
+        Float myFloat = 56.8f; // Valid
+        // Double myDouble1 = 56.8f; // Invalid, although this is valid in primitive as
+        // below (since these are classes and primitives are not).
+        double myDouble1 = 56.8f;
 
         // Holding null values
         Integer myInteger5 = null;

@@ -75,7 +75,7 @@ class Main {
         int myInt = 4 + (int) myDouble;
         System.out.println("result= " + myInt);
 
-        // Ex2: this will result in overflow since byte can only hold 127 to - 128,
+        // Ex2: this will result in overflow since byte can only hold -127 to 128,
         // hence the byteResult will be -116
         int anotherInt = 125;
         byte myByte = 15;

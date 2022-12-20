@@ -42,7 +42,8 @@ public class Main {
 
         /*
          * Remove
-         * - Can remove by value (first matching) or by index
+         * - Can remove by value (first occurrence) or by index
+         * - Will return a boolean
          */
         List<String> companies = new ArrayList();
         companies.add("Google");
@@ -52,12 +53,16 @@ public class Main {
         System.out.println(companies); // [Google, Microsoft, Toyota, Google]
         companies.remove("Google"); // remove first occurrence of Google
         System.out.println(companies); // [Microsoft, Toyota, Google]
-        companies.remove(0); // [Toyota, Google]
-        System.out.println(companies);
+        companies.remove(0);
+        System.out.println(companies); // [Toyota, Google]
+
+        // companies.remove(100); // will cause out of bound exception.
+
+        System.out.println("Tesla remove by value:" + companies.remove("Tesla")); // false
 
         /*
          * Set
-         * - Setting value at a specific index (replace)
+         * - Setting value at a specific index (will replace the existing value)
          */
         companies.set(0, "Microsoft");
         System.out.println(companies); // [Microsoft, Google]
