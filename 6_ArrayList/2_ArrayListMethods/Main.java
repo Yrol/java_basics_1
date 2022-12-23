@@ -125,5 +125,15 @@ public class Main {
         System.out.println(brands);
         System.out.println(newBrands);
         System.out.println(newBrands.equals(brands)); // false
+
+        // Using equals operator
+        List<String> a = new ArrayList();
+        a.add("abc");
+        List<String> b = new ArrayList();
+        b.add("abc");
+        System.out.println("a == b:" + (a == b)); // false (since in different memory locations)
+
+        List<String> c = a;
+        System.out.println("c == a:" + (c == a)); // true
     }
 }

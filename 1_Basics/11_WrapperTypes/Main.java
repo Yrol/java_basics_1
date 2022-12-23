@@ -16,13 +16,15 @@ class Main {
          * wrapper object.
          */
 
+        Integer myInteger = Integer.parseInt("10"); // Autoboxing since parseInt returns type:int
+
         // Deprecated
         Integer myInteger1 = new Integer(10);
 
         Integer myInteger2 = Integer.valueOf(10);
 
         // can also pass integers in string format
-        Integer myInteger3 = Integer.valueOf("20");
+        Integer myInteger3 = Integer.valueOf("20"); // NO Autoboxing here since valueOf returns type:Integer
 
         // Assigning a primitive directly
         Integer myInteger4 = 20;
