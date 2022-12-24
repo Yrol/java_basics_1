@@ -15,22 +15,21 @@ public class Main {
      * changed in the original array it'll affect both.
      */
     public static void main(String args[]) {
+
+        /*
+         * Converting Array to a List
+         * - Using toArray() method.
+         */
         List<String> names = new ArrayList<>();
         names.add("Tony");
         names.add("Jimmy");
         names.add("Anthony");
 
-        /*
-         * Using toArray() method.
-         * - Returns an Object array which isn't ideal all time.
-         */
+        // Using toArray() without type - defaults to type Object
         Object[] namesArray = names.toArray();
         System.out.println(namesArray.length);
 
-        /*
-         * Converting to a String array
-         */
-
+        // Converting to a String array
         // Method 1: passing size = 0 initially and will automatically resize since
         // names has more than 3 elements (less performant).
         String[] strArray = names.toArray(new String[0]);
@@ -42,7 +41,7 @@ public class Main {
         System.out.println(Arrays.toString(strArray));
 
         /*
-         * Converting array to a list
+         * Converting Array to a List
          */
 
         // Method 1: NOTE: the following will return a fixed size List.

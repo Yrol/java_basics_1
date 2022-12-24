@@ -51,9 +51,9 @@ public class Main {
         companies.add("Toyota");
         companies.add("Google");
         System.out.println(companies); // [Google, Microsoft, Toyota, Google]
-        companies.remove("Google"); // remove first occurrence of Google
+        companies.remove("Google"); // remove by value - first occurrence of Google
         System.out.println(companies); // [Microsoft, Toyota, Google]
-        companies.remove(0);
+        companies.remove(0); // remove by index
         System.out.println(companies); // [Toyota, Google]
 
         // companies.remove(100); // will cause out of bound exception.
@@ -135,5 +135,6 @@ public class Main {
 
         List<String> c = a;
         System.out.println("c == a:" + (c == a)); // true
+
     }
 }
