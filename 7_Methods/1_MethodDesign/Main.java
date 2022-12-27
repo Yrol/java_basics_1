@@ -2,9 +2,10 @@ public class Main {
 
     /*
      * Access modifiers
-     * - Default - no access modifier is provided - provides Package Private access.
+     * - Default - no access modifier specified - provides Package Private access
+     * (no subclass access).
      * - Public - can be called within any class.
-     * - Private - can be called within the same class.
+     * - Private - can only be called within the same class.
      * - Protected - can be called only by classes in same package or by sub-classes
      * - Curly brackets are required.
      * 
