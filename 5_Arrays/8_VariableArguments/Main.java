@@ -15,6 +15,8 @@ public class Main {
 
         // the printNames method can be called in multiple ways
         // No need to pass values as an array
+        printNames(); // will return an empty array
+        printNames(null, null); // will return [null, null]
         printNames("James");
         printNames("Ryan", "Roland", "Diego");
         printNames(new String[] { "Messi", "Roberto" }); // not necessary
