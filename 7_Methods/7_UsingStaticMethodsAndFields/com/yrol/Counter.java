@@ -42,7 +42,7 @@ public class Counter {
 
         /*
          * Non-static anotherCount
-         * Non-static anotherCount won't be shared across the instances
+         * - Non-static anotherCount won't be shared across the instances.
          */
 
         System.out.println(one.anotherCount); // 1

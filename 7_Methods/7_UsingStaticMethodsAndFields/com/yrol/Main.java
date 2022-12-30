@@ -9,7 +9,7 @@ package com.yrol;
 
 public class Main {
     public static void main(String[] args) {
-        // Using an instance variable (not necessary although it works)
+        // Using an instance (not necessary although it works)
         Dog husky = new Dog();
         System.out.println(husky.count); // will get a warning since we're accessing static method via an instance
 
