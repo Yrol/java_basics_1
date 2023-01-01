@@ -1,7 +1,7 @@
 /*
     * - Constructor is a special method with the same as the class name.
     * - Constructor doesn't have a return type.
-    * - COnstructors can have 0 to as many arguments.
+    * - Constructors can have 0 to as many arguments.
     * - Constructors are mostly used for instantiating instance variables.
     * - A Java file can have multiple classes and only one class can be public.
     */
@@ -49,11 +49,32 @@ class Cat {
     }
 }
 
+/*
+ * Class with private constructors
+ * - This class cannot be instantiate EXTERNALLY. It can only be called
+ * internally
+ * - Mostly used in utility methods with static methods.
+ */
+
+class Car {
+
+    private String type;
+
+    private Car() {
+        type = "Light Vehicle";
+    }
+
+    public static void type() {
+        Car car = new Car();
+        System.out.println(car.type);
+    }
+}
+
 public class Main {
 
     public static void main(String[] args) {
 
-        // Using the default constructor
+        // Using a constructor with no arguments
         Dog dog = new Dog();
         dog.printColor();
 
@@ -64,5 +85,9 @@ public class Main {
         Cat cat = new Cat(10);
         cat.printHeight(); // 0 since the value is only initialized.
         cat.printLength(); // 0 since the value is only initialized.
+
+        // Attempting to use private constructor
+        // Car car = new Car(); Doesn't compile
+        Car.type();
     }
 }
