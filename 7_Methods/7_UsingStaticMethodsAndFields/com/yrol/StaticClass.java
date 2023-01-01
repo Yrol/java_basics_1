@@ -51,6 +51,17 @@ public class StaticClass {
 
         // Method 2:
         new StaticClass().four();
+
+        /*
+         * Special case:
+         * - The following can be done since method "three" is a static method.
+         */
+        StaticClass staticClass2 = null;
+        staticClass.three();
+
+        // The following will run into a null pointer exception since method "four" is
+        // non-static
+        // staticClass.four(); // NullPointer exception
     }
 
 }

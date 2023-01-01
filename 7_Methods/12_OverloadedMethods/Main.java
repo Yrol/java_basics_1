@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
 
     /*
@@ -10,6 +8,9 @@ public class Main {
      * * Access modifiers
      * 
      * examples - StringBuilder.append(), Arrays.toString() & etc.
+     * 
+     * - Calling the overloading methods will result in auto-promoting to the
+     * arguments passed in.
      * 
      */
 
@@ -54,7 +55,14 @@ public class Main {
         return false;
     }
 
+    public void test() {
+
+    }
+
     public static void main(String[] args) {
+
+        Main test = null;
+        test.test();
 
         /*
          * Run examples

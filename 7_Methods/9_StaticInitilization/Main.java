@@ -51,6 +51,8 @@ public class Main {
         NAMES.add("John");
         NAMES.add("James");
 
+        // two = 2; // doesn't compile
+
     }
 
     public static void main(String[] args) {
