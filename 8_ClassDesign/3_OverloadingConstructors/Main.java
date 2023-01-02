@@ -2,6 +2,7 @@
  * - A class can have multiple constructors.
  * - A constructor can be overloaded using different parameters (similar to method overloads).
  * - A constructor inside another can be called using the keyword "this()".
+ * - "this()" to call another constructor can only be used within a constructor.
  */
 
 class Dog {

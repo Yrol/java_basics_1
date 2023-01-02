@@ -64,9 +64,18 @@ class Car {
         type = "Light Vehicle";
     }
 
+    public Car(String type) {
+        // Calling the private constructor above
+        this();
+    }
+
     public static void type() {
         Car car = new Car();
         System.out.println(car.type);
+    }
+
+    public void getName() {
+        System.out.println(type);
     }
 }
 
@@ -89,5 +98,10 @@ public class Main {
         // Attempting to use private constructor
         // Car car = new Car(); Doesn't compile
         Car.type();
+
+        // Valid since this constructor isn't private and it calls a private constructor
+        // inside it
+        Car car = new Car("Small Category");
+        car.getName();
     }
 }
