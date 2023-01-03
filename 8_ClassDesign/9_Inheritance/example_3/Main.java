@@ -20,8 +20,7 @@ class Animal {
 class Dog extends Animal {
     public Dog(int age, String name, String country) {
         super(age, name, country);
-        System.out.println("Dog");
-        this.country = "Vietnam"; // Accessing the protected vars
+        this.country = "Vietnam"; // Accessing the protected vars and change them if needed
     }
 }
 

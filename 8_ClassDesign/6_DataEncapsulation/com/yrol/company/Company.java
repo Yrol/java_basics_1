@@ -19,6 +19,8 @@ public class Company {
 
     public void setCompanyName(String companyName) {
 
+        // Adding local validation to prevent errors such as setting list to null and
+        // then call sort method & etc.
         if (companyName == null || companyName.isEmpty()) {
             System.out.println("Company name cannot be empty");
             return;
@@ -29,6 +31,7 @@ public class Company {
 
     public void setEmployee(String name) {
 
+        // Adding local validation
         if (name == null || name.isEmpty()) {
             System.out.println("Employee name cannot be empty");
             return;
