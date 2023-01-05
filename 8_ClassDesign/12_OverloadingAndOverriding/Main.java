@@ -17,7 +17,8 @@ class Bird {
 
 class Eagle extends Bird {
 
-    // An overloaded method "fly" from parent Bird class
+    // An overloaded method "fly" from parent Bird class. Notice the return type
+    // change from void to int
     public int fly(int height) {
         System.out.println("Eagle is flying at " + height);
         return height;
