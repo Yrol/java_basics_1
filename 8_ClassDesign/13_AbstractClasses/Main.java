@@ -1,9 +1,13 @@
 /*
  * Abstract classes
- * - The purpose of abstract classes is to make sure core functionality remains unchanged but can be extended.
+ * - The purpose of abstract classes is to make sure the core functionality remains unchanged but can be extended.
  * - Classes that are abstract CANNOT be instantiated (cannot create instances).
  * - Abstract methods - will ensure the child methods will implement the abstract methods.
+ * - Abstract classes or methods cannot be final.
  */
+
+// Invalid - abstract classes cannot be final
+// abstract final class Animal {} // Compilation error
 
 // Abstract class
 abstract class Animal {
