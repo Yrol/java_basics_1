@@ -12,7 +12,8 @@ class Animal {
 
 class Dog extends Animal {
     public Dog() {
-        // super(); // Not necessary as Java inject this automatically.
+        // super(); // Not necessary as Java inject this automatically for the
+        // non-argument constructors.
         System.out.println("Dog");
     }
 }
@@ -25,6 +26,7 @@ class Husky extends Dog {
 
 public class Main {
     public static void main(String[] args) {
-        Husky husky = new Husky(); // will print [Animal, Dog, Husky] in order since calling the parent classes.
+        Husky husky = new Husky(); // will print [Animal, Dog, Husky] in order since we're calling the parent
+                                   // classes.
     }
 }
