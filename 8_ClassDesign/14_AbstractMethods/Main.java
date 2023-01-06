@@ -41,6 +41,10 @@ abstract class Reptile extends Animal {
     public String thermophysiology() {
         return "Cold-blooded";
     }
+
+    // Attempting to overload the abstract method by changing the method signature
+    // (return type) instead of override is INVALID.
+    // public void thermophysiology() {} // Compilation error.
 }
 
 class Snake extends Reptile {
