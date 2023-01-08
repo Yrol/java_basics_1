@@ -19,10 +19,10 @@ abstract class Animal {
 class Bear extends Animal implements Carnivore, Hebivore {
 
     // Overriding the eatPlant method in Hebivore interface.
-    @Override
-    public void eatPlant() {
-        System.out.println("Bear eating plants.");
-    }
+    // @Override
+    // public void eatPlant() {
+    // System.out.println("Bear eating plants.");
+    // }
 
     // void eatPlant(){} // Doesn't compile as access modifier public is required
 
