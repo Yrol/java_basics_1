@@ -23,7 +23,7 @@ abstract class Animal {
     // Abstract methods cannot be declared as static
     // public static abstract String weight() // Compilation error
 
-    // Normal method
+    // Abstract classes can contain normal method
     protected boolean hasLegs() {
         return true;
     }
