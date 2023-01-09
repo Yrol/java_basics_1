@@ -4,13 +4,16 @@ public class Main {
      * - Overloaded methods are the same method (name) with different type of:
      * * parameters
      * * number of parameters
-     * * return types
      * * Access modifiers
      * 
-     * examples - StringBuilder.append(), Arrays.toString() & etc.
+     * 
+     * Note: Method overloading cannot be done by changing the return type of
+     * methods
      * 
      * - Calling the overloading methods will result in auto-promoting to the
      * arguments passed in.
+     * 
+     * More reading: https://tinyurl.com/2g2kk43l
      * 
      */
 
@@ -49,7 +52,8 @@ public class Main {
     // Ex2:
     public void walk(int[] miles) {
     }
-    // public void walk(int... miles){} // Doesn't compile
+    // public void walk(int... miles){} // Doesn't compile as varargs and arrays
+    // treated the same.
 
     public boolean walk() {
         return false;
