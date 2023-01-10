@@ -35,6 +35,10 @@ public class Main {
          * Creating a List using an Array
          */
         List<Integer> numberList = Arrays.asList(5, 4, 8, 10, 11, 3);
+
+        // Adding / Removing will not support for the Lists created using arrays.
+        // numberList.add(5); // Runtime UnsupportedOperationException
+        // numberList.add(6); // Runtime UnsupportedOperationException
         Collections.sort(numberList);
         System.out.println(numberList); // [3, 4, 5, 8, 10, 11]
 

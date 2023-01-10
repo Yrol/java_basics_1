@@ -17,7 +17,7 @@ public class Main {
     public static void main(String args[]) {
 
         /*
-         * Converting Array to a List
+         * Converting a List to an Array
          * - Using toArray() method.
          */
         List<String> names = new ArrayList<>();
