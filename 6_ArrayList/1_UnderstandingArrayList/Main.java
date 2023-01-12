@@ -8,6 +8,7 @@ public class Main {
      * - ArrayList is an implementation of the List interface (java.util.List)
      * - ArrayLists are similar to arrays and they're internally using an array.
      * - The internal array is an array of objects.
+     * - ArrayList cannot store a collection of primitives like int or double.
      * - ArrayList uses generics, hence we can specify the object type on creation.
      * - Defining the Object type is optional when creating the ArrayList.
      * - By default ArrayList is type Object (if the type is not defined inside <>).
@@ -36,6 +37,9 @@ public class Main {
 
         // initial capacity/size of the ArrayList and will automatically expands.
         List<String> myList4 = new ArrayList<>(20);
+
+        // ArrayList cannot store a collection of primitives like int or double
+        // List<int> myIntList = new ArrayList<>(); // Compilation error.
 
     }
 }

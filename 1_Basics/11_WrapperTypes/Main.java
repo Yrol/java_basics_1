@@ -38,6 +38,10 @@ class Main {
         // below (since these are classes and primitives are not).
         double myDouble1 = 56.8f;
 
+        // Double myDouble2 = 1; // Invalid although this can be assigned to primitive
+        // double.
+        double myDouble3 = 1;
+
         // Holding null values
         Integer myInteger5 = null;
 

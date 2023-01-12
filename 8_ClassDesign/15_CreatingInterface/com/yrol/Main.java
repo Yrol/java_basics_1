@@ -1,6 +1,6 @@
 /*
  * - Interface can contain constants and by default they're public, static and final. They cannot be change once declared in the interface.
- * - Interfaces can have methods by default they are public and abstract (automatically) and CANNOT be protected or private.
+ * - Interfaces can have methods by default they are public (access modifier) and abstract (automatically) and CANNOT be protected or private.
  * - Methods inside interfaces cannot have body (same as in abstract classes).
  * - The annotation @Override is optional to declare.
  */

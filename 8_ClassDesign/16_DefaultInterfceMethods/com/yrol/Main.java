@@ -18,13 +18,27 @@ abstract class Animal {
  */
 class Bear extends Animal implements Carnivore, Hebivore {
 
-    // Overriding the eatPlant method in Hebivore interface.
-    // @Override
-    // public void eatPlant() {
-    // System.out.println("Bear eating plants.");
+    // Overriding the eatPlant method in Hebivore interface - VALID
+    @Override
+    public void eatPlant() {
+        System.out.println("Bear is eating plants.");
+    }
+
+    // Overloading the eatPlant method (NOT RELATED TO THE PARENT INTERFACE METHOD
+    // and has different params)
+    public void eatPlant(int amount) {
+        System.out.println("Bear is eating " + amount + "kg of plants.");
+    }
+
+    // INVALID method override (invalid return type)
+    // public int eatPlant() {return 9;}
+
+    // VALID - since this becomes an overloaded method
+    // public int eatPlant(int amount) {
+    // return amount;
     // }
 
-    // void eatPlant(){} // Doesn't compile as access modifier public is required
+    // void eatPlant(){} // Doesn't compile as access modifier public is require
 
     public String thermophysiology() {
         return "Warm-blooded";
@@ -63,7 +77,9 @@ public class Main {
 
         Bear bear = new Bear();
         bear.eatMeat(); // Eating meat.
-        bear.eatPlant(); // Bear eating plants. (will print the overridden values)
+        bear.eatPlant(); // Bear is eating plants. -> (will print the overridden values in Bear class)
+        bear.eatPlant(10); // Bear is eating 10kg of plants. -> (will print the overloaded method in Bear
+                           // class)
 
         Dog dog = new Dog();
         dog.getSpeed(); // 20 (overridden value)

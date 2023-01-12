@@ -3,7 +3,7 @@
  * - Can only be defined in abstract classes.
  * - Cannot be declared as private or final.
  * - Must not provide a method body / implementation in the abstract class which it is declared. This should be done inside the child class.
- * - Implementing an abstract method follows te same rules as overriding methods. Ex: should have the same method signature. Access modifier need to be same or higher.
+ * - Abstract methods can only be overridden and CANNOT be overloaded (during implementation). Ex: should have the same method signature. Access modifier can be same or higher.
  * - Abstract methods cannot be declared as final.
  * - Abstract methods cannot be declared as static.
  */
