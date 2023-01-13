@@ -1,8 +1,11 @@
 public class Main {
 
     /*
-     * Primitives are compared using == operators.
-     * Object values are compared using .equals() operator (internal value of obj).
+     * - Primitives are compared using == operators.
+     * - Object values are compared using .equals() operator (internal value of obj)
+     * - When comparing Integer with int using == operator, the Integer(wrapper)
+     * will be converted to primitive. Hence values will be compared always instead
+     * of memory location.
      */
     public static void main(String[] args) {
 
@@ -13,7 +16,7 @@ public class Main {
         // -128 to 127
         Integer myInteger1 = 127; // similar to: Integer myInteger1 = Integer.valueOf(127)
         Integer myInteger2 = 127;
-        System.out.println("myInteger1 == myInteger2 when <= 127:" + (myInteger1 == myInteger2));
+        System.out.println("myInteger1 == myInteger2 when <= 127:" + (myInteger1 == myInteger2)); // true
 
         // checking the memory location which'll be same for both since <= 127
         System.out.println("myInteger1 memory location:" + System.identityHashCode(myInteger1));
@@ -58,6 +61,32 @@ public class Main {
         System.out.println("int1 equals(int2):" + (int1.equals(int2))); // true
         System.out.println("int1 equals(int3):" + (int1.equals(int3))); // true
         System.out.println("int2 equals(int3):" + (int2.equals(int3))); // true
+
+        /*
+         * Integer(wrapper) vs int(primitive)
+         * - Integer will be converted to primitive and the values of left ang right
+         * side will be compared always instead of memory location (unlike wrappers).
+         */
+
+        // Ex1:
+        int myInt = 5;
+        Integer myInteger = 5;
+        System.out.println("myInt==myInteger:" + (myInt == myInteger)); // true
+
+        // Memory location will be the same since within -128 to 127
+        System.out.println("myInt memory location:" + System.identityHashCode(myInt));
+        System.out.println("myInteger memory location:" + System.identityHashCode(myInteger));
+
+        // Ex2:
+        // Regardless of -128 to 127, the following will be true since it compares
+        // values instead of memory locations.
+        int myInt2 = 130;
+        Integer myInteger3 = 130;
+        System.out.println("myInt2==myInteger3:" + (myInt2 == myInteger3)); // true
+
+        // Memory location will be DIFFERENT since NOT within -128 to 127 range
+        System.out.println("myInt2 memory location:" + System.identityHashCode(myInt2));
+        System.out.println("myInteger3 memory location:" + System.identityHashCode(myInteger3));
 
         /*
          * Strings
