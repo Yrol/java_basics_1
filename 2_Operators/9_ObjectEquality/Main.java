@@ -56,11 +56,18 @@ public class Main {
         System.out.println("int2 memory location:" + System.identityHashCode(int2));
         System.out.println("int3 memory location:" + System.identityHashCode(int3));
 
-        // Using .equals()
+        // Using .equals(). It accepts type object, hence we can pass Strings.
         // Comparing the object values (the internal value) instead of object references
         System.out.println("int1 equals(int2):" + (int1.equals(int2))); // true
         System.out.println("int1 equals(int3):" + (int1.equals(int3))); // true
         System.out.println("int2 equals(int3):" + (int2.equals(int3))); // true
+        System.out.println("int3 equals(1):" + (int3.equals(1))); // true
+
+        // Integer.valueOf("1") will be converted to int before the comparison
+        System.out.println("int3 equals(Integer.valueOf(\"1\")):" + (int3.equals(Integer.valueOf("1")))); // true
+        System.out.println("int3 equals(new Integer(\"1\")):" + (int3.equals(new Integer("1")))); // true
+        System.out.println("int3 equals(\"1\"):" + (int3.equals("1"))); // false
+        System.out.println("int3 equals(1.0):" + (int3.equals(1.0))); // false
 
         /*
          * Integer(wrapper) vs int(primitive)
