@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /*
- * - In Java 8, there are 3 main classes that can be used for Date and Time:
+ * - In Java 8, there are 3 main classes that can be used for Date and Time available in the "java.time" package:
  *  - LocalTime -  using only when time related functionality is needed.
  *  - LocalDate - using only when date related functionality is needed. 
  *  - LocalDateTime - using when both time and date related functionality is needed.
