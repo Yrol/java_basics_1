@@ -9,14 +9,14 @@ public class Main {
     public static void main(String[] args) {
 
         /*
-         * Immutability with Java 8
+         * Immutability with LocalDate, LocalTime and LocalDateTime
          */
 
         // LocalDate
         LocalDate localDate = LocalDate.of(2022, Month.APRIL, 12);
         System.out.println(localDate);
         System.out.println(System.identityHashCode(localDate));
-        // localDate.plusDays(10); // Won't work / change as it needs to be reassigned
+        // localDate.plusDays(10); // Changes won't apply as it needs to be reassigned
         // to the variable.
         localDate = localDate.plusDays(10); // Will result in reassigning to a new memory location.
         System.out.println(localDate);
@@ -53,7 +53,7 @@ public class Main {
         myDate = myCalendar.getTime();
         System.out.println("myDate=" + myDate);
 
-        // Manipulating the current year, month and date
+        // Manipulating the current year, month and date individually.
         myCalendar.set(Calendar.DATE, 22);
         myCalendar.set(Calendar.MONTH, 11); // Will be December since month starts from 0
         myCalendar.set(Calendar.YEAR, 2022);
@@ -67,8 +67,9 @@ public class Main {
          * Exam tricks
          */
 
-        // Whats is the output of the following code? It will be the same since ld is
-        // immutable and need to reassigned in order to reflect the changes.
+        // Whats is the output of the following code? It will be the same since
+        // LocalDate is immutable and need to reassigned in order to reflect the
+        // changes.
         LocalDate ld = LocalDate.of(2015, 04, 13);
         ld.of(2022, Month.AUGUST, 8);
         System.out.println(ld);
