@@ -18,7 +18,7 @@ class Bird {
 class Eagle extends Bird {
 
     // An overloaded method "fly" from parent Bird class. Notice the return type
-    // difference from void to int
+    // difference from void to int and there's additional int argument.
     public int fly(int height) {
         System.out.println("Eagles are flying at " + height + " metres hight on average.");
         return height;

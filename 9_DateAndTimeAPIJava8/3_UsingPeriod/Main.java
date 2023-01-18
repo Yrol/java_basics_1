@@ -3,7 +3,7 @@
  * - Adding weeks to a date
  * - Adding month to a date
  * 
- * Important: its not possible to chain methods (static) in Periods. If we chain, only the last method will return a value. 
+ * Important: its NOT possible to chain methods (static) in Periods. If we chain, only the last method will return a value. 
  */
 
 import java.time.LocalDate;
