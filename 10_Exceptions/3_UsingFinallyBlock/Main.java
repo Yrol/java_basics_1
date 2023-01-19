@@ -1,5 +1,6 @@
 /*
- * - The finally block executes always regardless of try catch block execution (even if another exception is thrown from the catch block).
+ * - The finally block will be executed always regardless of try catch block execution (even if another exception is thrown within the catch block).
+ * - The only way to avoid the final block is to use  System.exit(0) (inside try or catch block, or even before) which will terminate the application.
  * - The order of the try, catch and finally block as is. (ex: we cannot place finally block at the top and the followed by try catch)
  */
 
