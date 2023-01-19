@@ -13,6 +13,12 @@ public class Main {
         // myMethod(); compiler error as the exception is not handled in a try catch
         // block
 
+        try {
+            myMethod();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         anotherMethod(); // Valid to call since its an unchecked exception
     }
 

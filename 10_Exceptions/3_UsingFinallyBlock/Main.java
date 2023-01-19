@@ -1,5 +1,5 @@
 /*
- * - The finally block executes always regardless of try catch block execution.
+ * - The finally block executes always regardless of try catch block execution (even if another exception is thrown from the catch block).
  * - The order of the try, catch and finally block as is. (ex: we cannot place finally block at the top and the followed by try catch)
  */
 
