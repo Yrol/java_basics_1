@@ -2,12 +2,14 @@
  * The return functions:
  * When the value is not returned outside of the try catch block:
  *  + The value must be returned at least inside try block or finally block (inside both is also valid).
- *  + Returning the value only inside catch block is NOT valid. 
+ *  + Returning the value only inside catch block is NOT valid (unless not returned outside of the try catch block). 
  * 
  */
 
 public class Main {
     public static void main(String[] args) {
+        // Notice the return value is printed last after all the messages inside try,
+        // catch and final blocks ae printed.
         System.out.println(calculate1()); // ErrorFinally0
         System.out.println(calculate2()); // ErrorFinally1
         System.out.println(calculate3()); // Finally0
