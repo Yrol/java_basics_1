@@ -1,3 +1,8 @@
+/*
+ * - A lambda expression is a short block of code which takes in parameters and returns a value.
+ * - Lambdas are working with functional interfaces (interface with one method).
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +56,7 @@ public class Main {
         // With lambda (not using a dedicated interface to filter "can swim" )
         print(animals, animal -> animal.canSwim());
 
-        // Using lambda to filter animal that cannot swim
+        // Using lambda to filter animal that cannot swim - using a block of code
         print(animals, animal -> !animal.canSwim());
 
     }
