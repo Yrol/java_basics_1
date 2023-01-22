@@ -1,10 +1,13 @@
 /*
- * - A lambda expression is a short block of code which takes in parameters and returns a value.
- * - Lambdas are working with functional interfaces (interface with one method).
+ * Predicates
+ * - Predicate is a built-in Java interface which can be used for filtering teh types: String, boolean & etc.
+ * - In other words an object which accepts any type of object.
+ * - For the exam remember the Predicate (Predicate<>) interface which has one method - "test" that accepts any type of object and returns a boolean.
  */
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 class Animal {
     private String type;
@@ -94,11 +97,33 @@ public class Main {
         // Ex2: (true && true => true)
         print(rabbit, dog, (first, second) -> first.canJump() && second.canJump());
 
+        /*
+         * Predicate example using ArrayList
+         */
+        List<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Ryan");
+        names.add("Desmond");
+
+        System.out.println("names=" + names);
+
+        // Using the predicate to remove name that starts with letter D. With Primitives
+        // we need to use "==" and for objects we need to use "=".
+        names.removeIf(name -> name.charAt(0) == 'D');
+
+        // With full lambda syntax
+        names.removeIf((String str) -> {
+            return str.charAt(0) == 'J';
+        });
+
+        System.out.println("names after remove=" + names);
+
     }
 
-    private static void print(List<Animal> animals, CheckAnimal filter) {
+    // Using the built-in Predicate with Animal object
+    private static void print(List<Animal> animals, Predicate<Animal> filter) {
         for (Animal animal : animals) {
-            if (filter.check(animal)) {
+            if (filter.test(animal)) { // using the test method in Predicate. It will accept type Animal
                 System.out.println(animal.getType());
             }
         }
